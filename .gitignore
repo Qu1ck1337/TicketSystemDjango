@@ -1,0 +1,98 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# Virtual environment
+*.env
+*.env.*
+
+# Static and media files (if gerenerates)
+staticfiles/
+media/
+
+# Local settings
+settings_local.py
+.env  # Если используете файл .env для переменных окружения
+
+# Migrations
+**/migrations/*.py
+!**/migrations/__init__.py
+
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/coverage/
+
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+.tox/
+.pytest_cache/
+
+# pipenv
+Pipfile.lock
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
