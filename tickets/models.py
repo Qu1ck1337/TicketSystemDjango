@@ -10,5 +10,11 @@ class Ticket(models.Model):
     event = models.ForeignKey(Event, to_field='event_id', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def save(self, *args, **kwargs):
+        if self._state.adding:  # Только при создании нового билета
+            self.event.available_tickets -= 1
+            self.event.save()
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return f"Ticket of {self.event} for {self.user}"

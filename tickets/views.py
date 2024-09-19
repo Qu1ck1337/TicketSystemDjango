@@ -19,6 +19,10 @@ class TicketPurchaseAPIView(CreateAPIView):
 
         try:
             event = Event.objects.get(event_id=event_id)
+
+            if event.available_tickets <= 0:
+                raise NotFound("No tickets available")
+
             serializer.save(event=event)
         except Event.DoesNotExist:
             raise NotFound("Event not found")
