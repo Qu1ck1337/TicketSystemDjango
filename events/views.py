@@ -1,8 +1,6 @@
-from django.shortcuts import render
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from events.models import Event
 from events.serializers import EventSerializer
-from tickets.models import Ticket
 
 
 # Create your views here.
