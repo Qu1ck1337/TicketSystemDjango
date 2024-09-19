@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'tickets.apps.TicketsConfig',
     'events.apps.EventsConfig',
     'users.apps.UsersConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

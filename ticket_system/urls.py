@@ -17,6 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from events.views import EventListAPIView, EventDetailAPIView
+from tickets.views import TicketPurchaseAPIView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('events/', EventListAPIView.as_view(), name='api-event-list'),
+    # event_id - is a key when we make a request
+    # (we can replace on pk - default key for primary key in object to make less code)
+    path('events/<uuid:event_id>', EventDetailAPIView.as_view(), name='api-event-detail'),
+    # now we use pk
+    path('events/<uuid:pk>/buy/', TicketPurchaseAPIView.as_view(), name='api-ticket-purchase'),
 ]
