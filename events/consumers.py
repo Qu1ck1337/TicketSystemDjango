@@ -2,6 +2,7 @@ import json
 from channels.generic.websocket import AsyncWebsocketConsumer
 
 
+# WebSocket consumer
 class TicketConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         self.event_id = self.scope['url_route']['kwargs']['event_id']

@@ -11,7 +11,7 @@ class Ticket(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
-        if self._state.adding:  # Только при создании нового билета
+        if self._state.adding:  # Called when the ticked is created
             self.event.available_tickets -= 1
             self.event.save()
         super().save(*args, **kwargs)
